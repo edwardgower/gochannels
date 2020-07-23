@@ -22,7 +22,7 @@ func main() {
 	for _, link := range links {
 		go checkLink(link, c)
 	}
-	// always pass a var in as an arg never share - pass by value.
+	//  pointer always pass a var  in as an arg never share - pass by value.
 	for l := range c {
 		go func(link string) {
 			time.Sleep(5 * time.Second) // pause in a sep func so we don't block the main func
